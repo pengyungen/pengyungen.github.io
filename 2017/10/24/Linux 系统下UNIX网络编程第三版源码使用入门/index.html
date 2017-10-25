@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>烽火的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Linux 系统下UNIX网络编程第三版源码使用入门  2017-10-21  最近在看UNIX网络编程，感觉书中的例子还是要亲身实践才行，这样便于理解。参考网上教程实现书中的第一个获取时间的例子，我用的是Linux下Centos7.2系统，源码下载：wget http://www.unpbook.com/unpv13e.tar.gz解压tar -xzvf unpv13e.tar.gzcd unp">
+  <meta name="description" content="Linux 系统下UNIX网络编程第三版源码使用入门  2017-10-25  最近在看UNIX网络编程，感觉书中的例子还是要亲身实践才行，这样便于理解。参考网上教程实现书中的第一个获取时间的例子，我用的是Linux下Centos7.2系统，源码下载：wget http://www.unpbook.com/unpv13e.tar.gz解压tar -xzvf unpv13e.tar.gzcd unp">
 <meta property="og:type" content="article">
 <meta property="og:title" content="烽火的博客">
 <meta property="og:url" content="http://yoursite.com/2017/10/24/Linux 系统下UNIX网络编程第三版源码使用入门/index.html">
 <meta property="og:site_name" content="烽火的博客">
-<meta property="og:description" content="Linux 系统下UNIX网络编程第三版源码使用入门  2017-10-21  最近在看UNIX网络编程，感觉书中的例子还是要亲身实践才行，这样便于理解。参考网上教程实现书中的第一个获取时间的例子，我用的是Linux下Centos7.2系统，源码下载：wget http://www.unpbook.com/unpv13e.tar.gz解压tar -xzvf unpv13e.tar.gzcd unp">
+<meta property="og:description" content="Linux 系统下UNIX网络编程第三版源码使用入门  2017-10-25  最近在看UNIX网络编程，感觉书中的例子还是要亲身实践才行，这样便于理解。参考网上教程实现书中的第一个获取时间的例子，我用的是Linux下Centos7.2系统，源码下载：wget http://www.unpbook.com/unpv13e.tar.gz解压tar -xzvf unpv13e.tar.gzcd unp">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/时间程序1.2.png">
 <meta property="og:image" content="http://yoursite.com/images/2.jpg">
-<meta property="og:updated_time" content="2017-10-24T11:07:08.155Z">
+<meta property="og:updated_time" content="2017-10-25T01:06:56.622Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="烽火的博客">
-<meta name="twitter:description" content="Linux 系统下UNIX网络编程第三版源码使用入门  2017-10-21  最近在看UNIX网络编程，感觉书中的例子还是要亲身实践才行，这样便于理解。参考网上教程实现书中的第一个获取时间的例子，我用的是Linux下Centos7.2系统，源码下载：wget http://www.unpbook.com/unpv13e.tar.gz解压tar -xzvf unpv13e.tar.gzcd unp">
+<meta name="twitter:description" content="Linux 系统下UNIX网络编程第三版源码使用入门  2017-10-25  最近在看UNIX网络编程，感觉书中的例子还是要亲身实践才行，这样便于理解。参考网上教程实现书中的第一个获取时间的例子，我用的是Linux下Centos7.2系统，源码下载：wget http://www.unpbook.com/unpv13e.tar.gz解压tar -xzvf unpv13e.tar.gzcd unp">
 <meta name="twitter:image" content="http://yoursite.com/images/时间程序1.2.png">
   
     <link rel="alternative" href="/atom.xml" title="烽火的博客" type="application/atom+xml">
@@ -182,7 +182,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><font size="5">Linux 系统下UNIX网络编程第三版源码使用入门</font></p>
-<p> 2017-10-21</p>
+<p> 2017-10-25</p>
 <hr>
 <p>最近在看UNIX网络编程，感觉书中的例子还是要亲身实践才行，这样便于理解。<a href="http://blog.csdn.net/it_wjw/article/details/51866335" target="_blank" rel="external">参考网上教程</a>实现书中的第一个获取时间的例子，我用的是Linux下Centos7.2系统，源码下载：<br>wget <a href="http://www.unpbook.com/unpv13e.tar.gz" target="_blank" rel="external">http://www.unpbook.com/unpv13e.tar.gz</a><br>解压<br>tar -xzvf unpv13e.tar.gz<br>cd unpv13e 进入解压文件目录，执行./configure；<br>cd lib然后执行make命令；<br>cd ../libfree  然后 make；<br>cd ../intro文件夹，再执行ls命令，可以看到有daytimetcpsrv文件，linux发行版本默认是不开daytime服务的， 这个例子实际上是两个程序，客户端和服务端，你很有可能只运行了客户端，没有运行服务端程序。PS：由于要打开端口，所以服务端程序需要用root权限执行，所以你可以先sudo ./daytimetcpsrv （如果本身就是root就不需要sudo），然后再开一个终端运行 ./daytimetcpcli 127.0.0.1 就可以看到返回的时间了。(注意，是另外再打开一个shell终端)<br><img src="/images/时间程序1.2.png" alt=""><br><img src="/images/2.jpg" alt=""> </p>
 
