@@ -6,22 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>烽火的博客</title>
+  <title>&lt;font size=5&gt;利用 stringstream 实现 string 和 int 的转化 | 烽火的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Linux 系统下UNIX网络编程第三版源码使用入门  2017-10-25  最近在看UNIX网络编程，感觉书中的例子还是要亲身实践才行，这样便于理解。参考网上教程实现书中的第一个获取时间的例子，我用的是Linux下Centos7.2系统，源码下载：wget http://www.unpbook.com/unpv13e.tar.gz解压">
+  <meta name="description" content="直接上代码了： ！">
 <meta property="og:type" content="article">
-<meta property="og:title" content="烽火的博客">
-<meta property="og:url" content="http://yoursite.com/2017/10/24/Linux 系统下UNIX网络编程第三版源码使用入门/index.html">
+<meta property="og:title" content="&lt;font size=5&gt;利用 stringstream 实现 string 和 int 的转化">
+<meta property="og:url" content="http://yoursite.com/2017/10/29/利用-stringstream-实现-string-和-int-的转化/index.html">
 <meta property="og:site_name" content="烽火的博客">
-<meta property="og:description" content="Linux 系统下UNIX网络编程第三版源码使用入门  2017-10-25  最近在看UNIX网络编程，感觉书中的例子还是要亲身实践才行，这样便于理解。参考网上教程实现书中的第一个获取时间的例子，我用的是Linux下Centos7.2系统，源码下载：wget http://www.unpbook.com/unpv13e.tar.gz解压">
+<meta property="og:description" content="直接上代码了： ！">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/images/时间程序1.2.png">
-<meta property="og:image" content="http://yoursite.com/images/2.jpg">
-<meta property="og:updated_time" content="2017-10-28T06:43:30.499Z">
+<meta property="og:image" content="http://yoursite.com/images/int-to-string.png">
+<meta property="og:image" content="http://yoursite.com/images/string-to-int.png">
+<meta property="og:updated_time" content="2017-10-29T05:13:46.988Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="烽火的博客">
-<meta name="twitter:description" content="Linux 系统下UNIX网络编程第三版源码使用入门  2017-10-25  最近在看UNIX网络编程，感觉书中的例子还是要亲身实践才行，这样便于理解。参考网上教程实现书中的第一个获取时间的例子，我用的是Linux下Centos7.2系统，源码下载：wget http://www.unpbook.com/unpv13e.tar.gz解压">
-<meta name="twitter:image" content="http://yoursite.com/images/时间程序1.2.png">
+<meta name="twitter:title" content="&lt;font size=5&gt;利用 stringstream 实现 string 和 int 的转化">
+<meta name="twitter:description" content="直接上代码了： ！">
+<meta name="twitter:image" content="http://yoursite.com/images/int-to-string.png">
   
     <link rel="alternative" href="/atom.xml" title="烽火的博客" type="application/atom+xml">
   
@@ -149,42 +149,32 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Linux 系统下UNIX网络编程第三版源码使用入门" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-利用-stringstream-实现-string-和-int-的转化" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
-	<!-- 目录内容 -->
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      &lt;font size=5&gt;利用 stringstream 实现 string 和 int 的转化
+    </h1>
+  
 
-    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
-          <span class="btn-bg"></span>
-          <span class="btn-text">文章导航</span>
-          </p>
-	<div id="toc-article" class="toc-article">
-	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-		<strong class="toc-title">文章目录</strong>
-           
-         </div>
-   <script type="text/javascript">
-	function showToc(){
-		var toc_article = document.getElementById("toc-article");
-		var show_toc_btn = document.getElementById("show-toc-btn");
-		toc_article.setAttribute("style","display:block");
-		show_toc_btn.setAttribute("style","display:none");
-		};
-	function showBtn(){
-		var toc_article = document.getElementById("toc-article");
-		var show_toc_btn = document.getElementById("show-toc-btn");
-		toc_article.setAttribute("style","display:none");
-		show_toc_btn.setAttribute("style","display:block");
-		};
-   </script>
-      		
+        
+        <a href="/2017/10/29/利用-stringstream-实现-string-和-int-的转化/" class="archive-article-date">
+  	<time datetime="2017-10-29T04:42:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-29</time>
+</a>
+        
+      </header>
+    
+	<!-- 目录内容 -->
+		
 <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <p><font size="5">Linux 系统下UNIX网络编程第三版源码使用入门</font></p>
-<p> 2017-10-25</p>
-<hr>
-<p>最近在看UNIX网络编程，感觉书中的例子还是要亲身实践才行，这样便于理解。<a href="http://blog.csdn.net/it_wjw/article/details/51866335" target="_blank" rel="external">参考网上教程</a>实现书中的第一个获取时间的例子，我用的是Linux下Centos7.2系统，源码下载：<br>wget <a href="http://www.unpbook.com/unpv13e.tar.gz" target="_blank" rel="external">http://www.unpbook.com/unpv13e.tar.gz</a><br>解压 <a id="more"></a><br>tar -xzvf unpv13e.tar.gz<br>会得到unpv13e文件夹，阅读README发现需要先编译一下本书的环境，便于后面代码的使用。<br>cd unpv13e 进入解压文件目录，执行./configure；<br>cd lib然后执行make命令；<br>cd ../libfree  然后 make；<br>cd ../intro文件夹，再执行ls命令，可以看到原始版本的 daytimetcpcli.c(client源码) 以及daytimetcpsrv.c (server端源码)，这个例子实际上是两个程序，客户端和服务端， 如果没有两台服务器的话，那么我们就在同一台服务器下面开两个进程(终端)， 其中一个作为server。linux发行版本默认是不开daytime服务的， 你很有可能只运行了客户端，没有运行服务端程序。PS：由于要打开端口，所以服务端程序需要用root权限执行，所以你可以先sudo ./daytimetcpsrv （如果本身就是root就不需要sudo），然后再开一个终端运行 ./daytimetcpcli 127.0.0.1 就可以看到返回的时间了。(注意，是另外再打开一个shell终端)<br><img src="/images/时间程序1.2.png" alt=""><br><img src="/images/2.jpg" alt=""> </p>
+        <p>直接上代码了： ！<a id="more"></a><br><img src="/images/int-to-string.png" alt="">   </p>
+<p><img src="/images/string-to-int.png" alt="">  </p>
+<p>除此之外，string 转 int 还可以这样做：<br>int a=0;<br>string str=”123”;<br>a=a*10+str[i]-‘0’;</p>
 
       
 
@@ -269,7 +259,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/10/24/Linux 系统下UNIX网络编程第三版源码使用入门/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/10/29/利用-stringstream-实现-string-和-int-的转化/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -283,17 +273,8 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/10/29/利用-stringstream-实现-string-和-int-的转化/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          &lt;font size=5&gt;利用 stringstream 实现 string 和 int 的转化
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/10/21/Hexo-github-搭建博客的详细教程/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/10/24/Linux 系统下UNIX网络编程第三版源码使用入门/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title"></div>
       <i class="icon-circle-right"></i>
     </a>
